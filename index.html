@@ -10,8 +10,25 @@
         <title>chartbool</title>
     </head>
     <body>
-        <canvas id="grafico"></canvas>
-        <canvas id="torta"></canvas>
+
+        <div class="selettori">
+            <select class="venditore" >
+                <option value="Giuseppe">Giuseppe</option>
+                <option value="Marco">Marco</option>
+                <option value="Roberto">Roberto</option>
+                <option value="Riccardo">Riccardo</option>
+
+            </select>
+            <input id="mese" type="date" value="2017-01-01" max="2017-12-31" min="2017-01-01">
+            <input id="vendita"type="number" value="1000">
+            <button id="bottone" type="button" name="button">Invia</button>
+        </div>
+
+        <div class="container">
+
+            <canvas id="grafico"></canvas>
+            <canvas id="torta"></canvas>
+        </div>
 
 
 
