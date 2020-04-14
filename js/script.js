@@ -17,7 +17,9 @@ $(document).ready(function () {
                 date: mese,
             },
             succes: function (data) {
-                console.log(data);
+
+
+
 
 
 
@@ -26,6 +28,7 @@ $(document).ready(function () {
 
         })
         grafici();
+
 
 
 
@@ -41,7 +44,20 @@ $(document).ready(function () {
                 method: 'GET',
                 success: function (data) {
                     var mesiTot = []
-                    var oggettoVuoto = {};
+                    var oggettoVuoto = {
+                        gennaio: 0,
+                        febbraio: 0,
+                        marzo: 0,
+                        aprile: 0,
+                        maggio: 0,
+                        giugno: 0,
+                        luglio: 0,
+                        agosto: 0,
+                        settembre: 0,
+                        ottobre: 0,
+                        novembre: 0,
+                        dicembre: 0
+                    };
                     for (var i = 0; i < data.length; i++) {
                         var oggetto = data[i]
                         var mese = oggetto.date;
@@ -60,6 +76,9 @@ $(document).ready(function () {
 
 
                     }
+                    console.log(oggettoVuoto);
+                    console.log(dataMese);
+                    console.log(mese);
 
 
                     var ctx = $('#grafico');
